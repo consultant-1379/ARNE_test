@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ARNE-VCDB_Suite">
+        <test name="ARNE-VCDB_Suite">
+            <classes>
+  				<class name="com.ericsson.oss.arne.test.cases.Modify_PerformanceTest" />
+  				<class name="com.ericsson.oss.arne.test.cases.Reparenting_PerformanceTest" />
+  				<class name="com.ericsson.oss.arne.test.cases.StartAdjust_PerformanceTest" />
+  				<class name="com.ericsson.oss.arne.test.cases.DeltaModelGeneration_PerformanceTest" />
+			</classes>
+        </test>
+</suite>

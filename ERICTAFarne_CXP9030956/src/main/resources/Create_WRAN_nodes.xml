@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne13_2.dtd">
+<Model version="1" importVersion="13.2">
+   <Create>
+      <FtpServer userLabel="">
+         <FtpServerId string="FTP_VCDB"/>
+         <ipAddress string="1.2.3.24"/>
+         <hostname string=""/>
+         <dataPortId int="0"/>
+         <controlPortId int="0"/>
+         <directoryPath string=""/>
+         <serviceSecurityState string="ON"/>
+                 <FtpService userLabel="FTP_sw_VCDB">
+            <name string="FTP_sw_VCDB"/>
+            <directoryPath string=""/>
+            <type string="SwStore"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTP_sw_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTP_sw_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTP_Auto_VCDB">
+            <name string="FTP_Auto_VCDB"/>
+            <directoryPath string="/CORE//AIF/"/>
+            <type string="autoIntegration"/>
+            <networkType string="Core"/>
+            <Tss>
+               <Entry>
+                  <System string="FTP_Auto_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTP_Auto_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+ </FtpServer>
+      <Site userLabel="Site01">
+         <altitude string="0"/>
+         <location string="Bangalore"/>
+         <longitude string="0"/>
+         <latitude string="0"/>
+         <worldTimeZoneId string="GB-Eire"/>
+         <freeText string=""/>
+         <datum string="wgs84"/>
+      </Site>
+      <SubNetwork userLabel="RNC_VCDB" networkType="IPRAN">
+         <Group userLabel="RBSGrp_VCDB" groupType="RBSGroup" networkType="MSS"></Group>
+         <ManagedElement sourceType="PICO">
+            <ManagedElementId string="PRBS_VCDB"/>
+            <primaryType type="PRBS"/>
+            <managedElementType types="NodeB"/>
+            <associatedSite string="Site=Site01"/>
+            <nodeVersion string="13B"/>
+            <platformVersion string=""/>
+            <swVersion string=""/>
+            <vendorName string=""/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <DEFAULT>
+                  <emUrl url="1.2.3.23"/>
+                  <ipAddress string="1.2.3.23"/>
+                  <oldIpAddress string=""/>
+                  <hostname string=""/>
+                  <nodeSecurityState state="ON"/>
+                  <boardId string=""/>
+                  <Protocol number="0">
+                     <protocolType string="Netconf"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string=""/>
+                     <namingPort int=""/>
+                     <notificationIRPAgentVersion string=""/>
+                     <alarmIRPAgentVersion string=""/>
+                     <notificationIRPNamingContext context=""/>
+                     <alarmIRPNamingContext context=""/>
+                  </Protocol>
+                  <Protocol number="1">
+                     <protocolType string="SNMP"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string=""/>
+                     <namingPort int=""/>
+                     <notificationIRPAgentVersion string=""/>
+                     <alarmIRPAgentVersion string=""/>
+                     <notificationIRPNamingContext context=""/>
+                     <alarmIRPNamingContext context=""/>
+                  </Protocol>
+                  <Protocol number="2">
+                     <protocolType string="SSH"/>
+                     <port int="22"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string=""/>
+                     <namingPort int=""/>
+                     <notificationIRPAgentVersion string=""/>
+                     <alarmIRPAgentVersion string=""/>
+                     <notificationIRPNamingContext context=""/>
+                     <alarmIRPNamingContext context=""/>
+                  </Protocol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+               </DEFAULT>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="PRBS_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="PRBS_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="FtpServer=FTP_VCDB,FtpService=FTP_Auto_VCDB" AssociationType="ManagedElement_to_autoIntegration"/>
+               <AssociableNode TO_FDN="FtpServer=FTP_VCDB,FtpService=FTP_sw_VCDB" AssociationType="ManagedElement_to_ftpSwStore"/>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               <AssociableNode TO_FDN="SubNetwork=RNC_VCDB,Group=RBSGrp_VCDB" AssociationType="Group_to_ManagedElement"/>
+            </Relationship>
+         </ManagedElement>
+         <ManagedElement sourceType="CELLO">
+            <ManagedElementId string="RBS_VCDB"/>
+            <primaryType type="RBS"/>
+            <managedElementType types=""/>
+            <associatedSite string="Site=Site01"/>
+            <nodeVersion string=""/>
+            <platformVersion string=""/>
+            <swVersion string=""/>
+            <vendorName string="Ericsson"/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <neMIMVersion string="T.1.72"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <DEFAULT>
+                  <emUrl url="http://1.2.3.20:80/em/index.html"/>
+                  <ipAddress string="1.2.3.20"/>
+                  <oldIpAddress string=""/>
+                  <hostname string=""/>
+                  <nodeSecurityState state="ON"/>
+                  <boardId string=""/>
+                  <Protocol number="0">
+                     <protocolType string="CORBA"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string="http://1.2.3.20:80/cello/ior_files/nameroot.ior"/>
+                     <namingPort int="0"/>
+                     <notificationIRPAgentVersion string="3.2"/>
+                     <alarmIRPAgentVersion string="3.2"/>
+                     <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                     <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+                  </Protocol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+               </DEFAULT>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="RBS_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="RBS_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               <AssociableNode TO_FDN="SubNetwork=RNC_VCDB,Group=RBSGrp_VCDB" AssociationType="Group_to_MeContext"/>
+            </Relationship>
+         </ManagedElement>
+         <ManagedElement sourceType="CELLO">
+            <ManagedElementId string="RNC_VCDB"/>
+            <primaryType type="RNC"/>
+            <managedElementType types=""/>
+            <associatedSite string="Site=Site01"/>
+            <nodeVersion string=""/>
+            <platformVersion string=""/>
+            <swVersion string=""/>
+            <vendorName string="Ericsson"/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <neMIMVersion string="M.5.130"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <DEFAULT>
+                  <emUrl url="http://1.2.3.4:80/em/index.html"/>
+                  <ipAddress string="1.2.3.4"/>
+                  <oldIpAddress string=""/>
+                  <hostname string=""/>
+                  <nodeSecurityState state="ON"/>
+                  <boardId string=""/>
+                  <Protocol number="0">
+                     <protocolType string="CORBA"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string="http://1.2.3.4:80/cello/ior_files/nameroot.ior"/>
+                     <namingPort int="0"/>
+                     <notificationIRPAgentVersion string="3.2"/>
+                     <alarmIRPAgentVersion string="3.2"/>
+                     <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                     <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+                  </Protocol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+               </DEFAULT>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="RNC_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="RNC_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               <AssociableNode TO_FDN="MeContext=RXI_VCDB,ManagedElement=1" AssociationType="RNC_to_RANAG"/>
+            </Relationship>
+         </ManagedElement>
+      </SubNetwork>
+      <ManagedElement sourceType="CELLO">
+         <ManagedElementId string="ERBS_VCDB"/>
+         <primaryType type="ERBS"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Site01"/>
+         <nodeVersion string=""/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <neMIMVersion string="TDD10.1.2"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="http://1.2.3.22:80/em/index.html"/>
+               <ipAddress string="1.2.3.22"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="CORBA"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string="http://1.2.3.22:80/cello/ior_files/nameroot.ior"/>
+                  <namingPort int="0"/>
+                  <notificationIRPAgentVersion string="3.2"/>
+                  <alarmIRPAgentVersion string="3.2"/>
+                  <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                  <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="ERBS_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="ERBS_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="CELLO">
+         <ManagedElementId string="RXI_VCDB"/>
+         <primaryType type="RANAG"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Site01"/>
+         <nodeVersion string=""/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <neMIMVersion string="J.1.141"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="http://1.2.3.21:80/em/index.html"/>
+               <ipAddress string="1.2.3.21"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="CORBA"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string="http://1.2.3.21:80/cello/ior_files/nameroot.ior"/>
+                  <namingPort int="0"/>
+                  <notificationIRPAgentVersion string="3.2"/>
+                  <alarmIRPAgentVersion string="3.2"/>
+                  <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                  <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="RXI_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="RXI_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+            <AssociableNode TO_FDN="SubNetwork=RNC_VCDB,MeContext=RNC_VCDB,ManagedElement=1" AssociationType="RNC_to_RANAG"/>
+         </Relationship>
+      </ManagedElement>
+   </Create>
+</Model>

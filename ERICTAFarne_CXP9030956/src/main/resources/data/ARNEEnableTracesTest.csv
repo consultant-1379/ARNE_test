@@ -1,0 +1,3 @@
+scriptName,remotePath
+LogBackUp.sh,/var/opt/ericsson/arne/ARNE_KGB
+enableTraces.sh,/var/opt/ericsson/arne/ARNE_KGB

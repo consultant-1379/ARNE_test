@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ARNE-FtpServer_Import.xml">
+        <test name="ARNE-FtpServer_Import.xml">
+            <classes>
+  				<class name="com.ericsson.oss.arne.test.cases.FtpServerImportTest" />
+			</classes>
+        </test>
+</suite>

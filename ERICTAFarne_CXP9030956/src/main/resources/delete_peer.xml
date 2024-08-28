@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne13_2.dtd">
+<Model version="1" importVersion="13.2">
+   <Create>
+      <Site userLabel="SITE_VCDB">
+         <altitude string="0"/>
+         <location string="Bangalore"/>
+         <longitude string="0"/>
+         <latitude string="0"/>
+         <worldTimeZoneId string="IST"/>
+         <freeText string=""/>
+         <datum string="wgs84"/>
+      </Site>
+      <Group userLabel="CUDBGrp_VCDB" groupType="CUDBSystem" networkType="CORE"></Group>
+      <Group userLabel="PGGrp_VCDB" groupType="PGGroup" networkType="CORE"></Group>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="BSC_VCDB"/>
+         <primaryType type="BSC"/>
+         <managedElementType types="TRC"/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string="R10"/>
+         <platformVersion string="AXE 105 07/207 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="1.2.3.41"/>
+                     <ioIpAddressNodeA ip_v4="1.2.3.42"/>
+                     <ioIpAddressNodeB ip_v4="1.2.3.43"/>
+                     <hostname string=""/>
+                     <ftpRoot string="/"/>
+                     <securedFtpRoot string="/K:/fms/data/tmp"/>
+                     <ftpArea string="K:\fms\data\tmp"/>
+                     <securedFtpArea string="K:\fms\data\tmp"/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="BSC_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="BSC_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagedElement=MSC_VCDB" AssociationType="MGW_to_BSC"/>
+            <AssociableNode TO_FDN="ManagedElement=SGSN_VCDB" AssociationType="SGSN_to_BSC"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="LINUX">
+         <ManagedElementId string="CUDB_VCDB"/>
+         <primaryType type="CUDB"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string="R1.0"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.2.3.48"/>
+               <ipAddress string="1.2.3.48"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="CUDB_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="CUDB_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=CUDBGrp_VCDB" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagedElement=PG_VCDB,PgFunction=PG_ManagedFunction" FROM_FDN="ManagedElement=CUDB_VCDB,CudbFunction=CUDB_ManagedFunction" AssociationType="PgFunction_to_CudbFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="ISBladeHybrid">
+         <ManagedElementId string="HLRSER_VCDB"/>
+         <primaryType type="HLRServer"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string="13B"/>
+         <platformVersion string="3.1"/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <ISBlade>
+               <emUrl url="https://1.2.3.56"/>
+               <nodeSecurityState state="ON"/>
+                  <ISIO ioType="SISIO">
+                     <IsIoInterfaceId string="I1"/>
+                     <bladeSystemId string=""/>
+                     <version string=""/>
+                     <ipAddress string="1.2.3.56"/>
+                     <hostname string=""/>
+                     <securityState state=""/>
+                  </ISIO>
+                  <APGCluster ioType="APG43">
+                     <AxeIoInterfaceId string="AIO1"/>
+                     <ioApplications applications="APIO"/>
+                     <IPAddressing>
+                        <ioIpAddressCluster ip_v4="1.2.3.53"/>
+                        <ioIpAddressNodeA ip_v4="1.2.3.54"/>
+                        <ioIpAddressNodeB ip_v4="1.2.3.55"/>
+                        <hostname string=""/>
+                        <ftpRoot string="/"/>
+                        <securedFtpRoot string="/K:/fms/data/tmp"/>
+                        <ftpArea string="K:\fms\data\tmp"/>
+                        <securedFtpArea string="K:\fms\data\tmp"/>
+                     </IPAddressing>
+                     <AxeProtocol number="0">
+                        <protocolType string="SNMP"/>
+                        <port int="0"/>
+                        <protocolVersion string=""/>
+                     </AxeProtocol>
+                     <AxeProtocol number="1">
+                        <protocolType string="SSH"/>
+                        <port int="22"/>
+                        <protocolVersion string=""/>
+                     </AxeProtocol>
+                     <AxeProtocol number="2">
+                        <protocolType string="MMLSETUP"/>
+                        <port int="5002"/>
+                        <protocolVersion string=""/>
+                     </AxeProtocol>
+                     <AxeProtocol number="3">
+                        <protocolType string="TELNET"/>
+                        <port int="23"/>
+                        <protocolVersion string=""/>
+                     </AxeProtocol>
+                     <AxeProtocol number="4">
+                        <protocolType string="Netconf"/>
+                        <port int="0"/>
+                        <protocolVersion string=""/>
+                     </AxeProtocol>
+                     <AxeProtocol number="5">
+                        <protocolType string="HTTPS"/>
+                        <port int="0"/>
+                        <protocolVersion string=""/>
+                     </AxeProtocol>
+                  </APGCluster>
+                  <Function number="0">
+                      <functionName string="Ethernetswitching_Func_2"/>
+                     <userLabel string=""/>
+                     <functionType string="Ethernetswitching"/>
+                     <functionVersion string=""/>
+                     <platformType string=""/>
+                     <bladeSystemId string="B3"/>
+                     <Relationship>
+                       <AssociableNode TO_FDN="ManagedElement=HLRSER_VCDB,IsIoInterface=I1" AssociationType="IsIoInterface_to_EthernetswitchingFunction"/>
+                     </Relationship>
+                  </Function>
+                  <Function number="2">
+                      <functionName string="Iprouting_Func_1"/>
+                     <userLabel string=""/>
+                     <functionType string="Iprouting"/>
+                     <functionVersion string=""/>
+                     <platformType string=""/>
+                     <bladeSystemId string="B2"/>
+                     <Relationship>
+                       <AssociableNode TO_FDN="ManagedElement=HLRSER_VCDB,IsIoInterface=I1" AssociationType="IsIoInterface_to_IproutingFunction"/>
+                     </Relationship>
+                  </Function>
+                  <Function number="3">
+                      <functionName string="IsInfra_Func_0"/>
+                     <userLabel string=""/>
+                     <functionType string="IsInfra"/>
+                     <functionVersion string=""/>
+                     <platformType string=""/>
+                     <bladeSystemId string="B1"/>
+                     <Relationship>
+                       <AssociableNode TO_FDN="ManagedElement=HLRSER_VCDB,IsIoInterface=I1" AssociationType="IsIoInterface_to_IsInfraFunction"/>
+                     </Relationship>
+                  </Function>
+                  <WinFiol>
+                     <loginType string="tgwsingle"/>
+                     <wfDangerousCmdsFile0 string=""/>
+                     <wfDangerousCmdsFile1 string=""/>
+                  </WinFiol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+                  <CpCluster>
+                     <bladeSystemId string="C1"/>
+                  </CpCluster>
+               </ISBlade>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="HLRSER_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="HLRSER_VCDB"/>
+                  <Type string="SECURE_EXPERT"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="HLRSER_VCDB"/>
+                  <Type string="NORMAL_EXPERT"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="HLRSER_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="Group=CUDBGrp_VCDB" AssociationType="Group_to_ManagedElement"/>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+            </Relationship>
+         </ManagedElement>
+         <ManagedElement sourceType="ISBladeHybrid">
+            <ManagedElementId string="MSCSER_VCDB"/>
+            <primaryType type="MSCServer"/>
+            <managedElementType types=""/>
+            <associatedSite string="Site=SITE_VCDB"/>
+            <nodeVersion string="R14B"/>
+            <platformVersion string="1.2"/>
+            <swVersion string=""/>
+            <vendorName string=""/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <ISBlade>
+                  <emUrl url="http://1.2.3.40"/>
+                  <nodeSecurityState state="ON"/>
+                     <ISIO ioType="SISIO">
+                        <IsIoInterfaceId string="I1"/>
+                        <bladeSystemId string=""/>
+                        <version string=""/>
+                        <ipAddress string="1.2.3.40"/>
+                        <hostname string=""/>
+                        <securityState state=""/>
+                     </ISIO>
+                     <APGCluster ioType="APG43">
+                        <AxeIoInterfaceId string="AIO1"/>
+                        <ioApplications applications="APIO"/>
+                        <IPAddressing>
+                           <ioIpAddressCluster ip_v4="1.2.3.34"/>
+                           <ioIpAddressNodeA ip_v4="1.2.3.35"/>
+                           <ioIpAddressNodeB ip_v4="1.2.3.36"/>
+                           <hostname string=""/>
+                           <ftpRoot string="/"/>
+                           <securedFtpRoot string="/K:/fms/data/tmp"/>
+                           <ftpArea string="K:\fms\data\tmp"/>
+                           <securedFtpArea string="K:\fms\data\tmp"/>
+                        </IPAddressing>
+                        <AxeProtocol number="0">
+                           <protocolType string="HTTPS"/>
+                           <port int="0"/>
+                           <protocolVersion string=""/>
+                        </AxeProtocol>
+                        <AxeProtocol number="1">
+                           <protocolType string="MMLSETUP"/>
+                           <port int="5002"/>
+                           <protocolVersion string=""/>
+                        </AxeProtocol>
+                        <AxeProtocol number="2">
+                           <protocolType string="Netconf"/>
+                           <port int="0"/>
+                           <protocolVersion string=""/>
+                        </AxeProtocol>
+                        <AxeProtocol number="3">
+                           <protocolType string="TELNET"/>
+                           <port int="23"/>
+                           <protocolVersion string=""/>
+                        </AxeProtocol>
+                        <AxeProtocol number="4">
+                           <protocolType string="SNMP"/>
+                           <port int="0"/>
+                           <protocolVersion string=""/>
+                        </AxeProtocol>
+                        <AxeProtocol number="5">
+                           <protocolType string="SSH"/>
+                           <port int="22"/>
+                           <protocolVersion string=""/>
+                        </AxeProtocol>
+                     </APGCluster>
+                     <APGCluster ioType="APG43">
+                        <AxeIoInterfaceId string="AIO2"/>
+                        <ioApplications applications="FOS"/>
+                        <IPAddressing>
+                           <ioIpAddressCluster ip_v4="1.2.3.37"/>
+                           <ioIpAddressNodeA ip_v4="1.2.3.38"/>
+                           <ioIpAddressNodeB ip_v4="1.2.3.39"/>
+                           <hostname string=""/>
+                           <ftpRoot string="/"/>
+                           <securedFtpRoot string="/K:/fms/data/tmp"/>
+                           <ftpArea string="K:\fms\data\tmp"/>
+                           <securedFtpArea string="K:\fms\data\tmp"/>
+                        </IPAddressing>
+                     </APGCluster>
+                     <Function number="0">
+                         <functionName string="Ethernetswitching_Func_2"/>
+                        <userLabel string=""/>
+                        <functionType string="Ethernetswitching"/>
+                        <functionVersion string=""/>
+                        <platformType string=""/>
+                        <bladeSystemId string="B3"/>
+                        <Relationship>
+                          <AssociableNode TO_FDN="ManagedElement=MSCSER_VCDB,IsIoInterface=I1" AssociationType="IsIoInterface_to_EthernetswitchingFunction"/>
+                        </Relationship>
+                     </Function>
+                     <Function number="2">
+                         <functionName string="Iprouting_Func_1"/>
+                        <userLabel string=""/>
+                        <functionType string="Iprouting"/>
+                        <functionVersion string=""/>
+                        <platformType string=""/>
+                        <bladeSystemId string="B2"/>
+                        <Relationship>
+                          <AssociableNode TO_FDN="ManagedElement=MSCSER_VCDB,IsIoInterface=I1" AssociationType="IsIoInterface_to_IproutingFunction"/>
+                        </Relationship>
+                     </Function>
+                     <Function number="3">
+                         <functionName string="IsInfra_Func_0"/>
+                        <userLabel string=""/>
+                        <functionType string="IsInfra"/>
+                        <functionVersion string=""/>
+                        <platformType string=""/>
+                        <bladeSystemId string="B1"/>
+                        <Relationship>
+                          <AssociableNode TO_FDN="ManagedElement=MSCSER_VCDB,IsIoInterface=I1" AssociationType="IsIoInterface_to_IsInfraFunction"/>
+                        </Relationship>
+                     </Function>
+                     <WinFiol>
+                        <loginType string="tgwsingle"/>
+                        <wfDangerousCmdsFile0 string=""/>
+                        <wfDangerousCmdsFile1 string=""/>
+                     </WinFiol>
+                     <Browser>
+                        <browser string=""/>
+                        <browserURL string=""/>
+                        <bookname string=""/>
+                     </Browser>
+                     <CpCluster>
+                        <bladeSystemId string="C1"/>
+                     </CpCluster>
+                  </ISBlade>
+               </Connectivity>
+               <Tss>
+                  <Entry>
+                     <System string="MSCSER_VCDB"/>
+                     <Type string="NORMAL"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB"/>
+                     <Type string="SECURE_EXPERT"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB"/>
+                     <Type string="NORMAL_EXPERT"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB"/>
+                     <Type string="SECURE"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB_1"/>
+                     <Type string="NORMAL_EXPERT"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB_1"/>
+                     <Type string="SECURE"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB_1"/>
+                     <Type string="NORMAL"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSCSER_VCDB_1"/>
+                     <Type string="SECURE_EXPERT"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+               </Tss>
+               <Relationship>
+                  <AssociableNode TO_FDN="ManagedElement=MSC_VCDB" AssociationType="MSCServer_to_MGW"/>
+                  <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               </Relationship>
+            </ManagedElement>
+            <ManagedElement sourceType="AXE">
+               <ManagedElementId string="MSC_VCDB"/>
+               <primaryType type="MSC"/>
+               <managedElementType types="HLR,MGW"/>
+               <associatedSite string="Site=SITE_VCDB"/>
+               <nodeVersion string="R14B"/>
+               <platformVersion string="APX 101 01/4 R1A"/>
+               <swVersion string=""/>
+               <vendorName string="Ericsson"/>
+               <userDefinedState string=""/>
+               <managedServiceAvailability int="1"/>
+               <isManaged boolean="true"/>
+               <connectionStatus string="ON"/>
+               <Connectivity>
+                  <AXE>
+                     <nodeSecurityState state="ON"/>
+                     <neOSSHostname string="masterservice"/>
+                     <APG ioType="APG43L">
+                        <ioApplications applications="APIO"/>
+                        <IPAddressing>
+                           <ioIpAddressCluster ip_v4="1.2.3.30"/>
+                           <ioIpAddressNodeA ip_v4="1.2.3.31"/>
+                           <ioIpAddressNodeB ip_v4="1.2.3.32"/>
+                           <hostname string=""/>
+                           <ftpRoot string=""/>
+                           <securedFtpRoot string=""/>
+                           <ftpArea string=""/>
+                           <securedFtpArea string=""/>
+                        </IPAddressing>
+                     </APG>
+                     <WinFiol>
+                        <loginType string="tgwsingle"/>
+                        <wfDangerousCmdsFile0 string=""/>
+                        <wfDangerousCmdsFile1 string=""/>
+                     </WinFiol>
+                     <Browser>
+                        <browser string=""/>
+                        <browserURL string=""/>
+                        <bookname string=""/>
+                     </Browser>
+                  </AXE>
+               </Connectivity>
+               <Tss>
+                  <Entry>
+                     <System string="MSC_VCDB"/>
+                     <Type string="NORMAL"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="MSC_VCDB"/>
+                     <Type string="SECURE"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+               </Tss>
+               <Relationship>
+                  <AssociableNode TO_FDN="ManagedElement=BSC_VCDB" AssociationType="MGW_to_BSC"/>
+                  <AssociableNode TO_FDN="ManagedElement=MSCSER_VCDB" AssociationType="MSCServer_to_MGW"/>
+                  <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               </Relationship>
+            </ManagedElement>
+            <ManagedElement sourceType="LINUX">
+               <ManagedElementId string="PG_VCDB"/>
+               <primaryType type="PG"/>
+               <managedElementType types=""/>
+               <associatedSite string="Site=SITE_VCDB"/>
+               <nodeVersion string="R5.0"/>
+               <platformVersion string=""/>
+               <swVersion string=""/>
+               <vendorName string=""/>
+               <userDefinedState string=""/>
+               <managedServiceAvailability int="1"/>
+               <isManaged boolean="true"/>
+               <connectionStatus string="ON"/>
+               <Connectivity>
+                  <DEFAULT>
+                     <emUrl url="https://1.2.3.49:8181/management"/>
+                     <ipAddress string="1.2.3.49"/>
+                     <oldIpAddress string=""/>
+                     <hostname string=""/>
+                     <nodeSecurityState state="ON"/>
+                     <boardId string=""/>
+                     <Protocol number="0">
+                        <protocolType string="SFTP"/>
+                        <port int="22"/>
+                        <protocolVersion string=""/>
+                        <securityName string=""/>
+                        <authenticationMethod string=""/>
+                        <encryptionMethod string=""/>
+                        <communityString string=""/>
+                        <context string=""/>
+                        <namingUrl string=""/>
+                        <namingPort int=""/>
+                        <notificationIRPAgentVersion string=""/>
+                        <alarmIRPAgentVersion string=""/>
+                        <notificationIRPNamingContext context=""/>
+                        <alarmIRPNamingContext context=""/>
+                     </Protocol>
+                     <Protocol number="1">
+                        <protocolType string="SNMP"/>
+                        <port int="0"/>
+                        <protocolVersion string=""/>
+                        <securityName string=""/>
+                        <authenticationMethod string=""/>
+                        <encryptionMethod string=""/>
+                        <communityString string=""/>
+                        <context string=""/>
+                        <namingUrl string=""/>
+                        <namingPort int=""/>
+                        <notificationIRPAgentVersion string=""/>
+                        <alarmIRPAgentVersion string=""/>
+                        <notificationIRPNamingContext context=""/>
+                        <alarmIRPNamingContext context=""/>
+                     </Protocol>
+                     <Protocol number="2">
+                        <protocolType string="SSH"/>
+                        <port int="22"/>
+                        <protocolVersion string=""/>
+                        <securityName string=""/>
+                        <authenticationMethod string=""/>
+                        <encryptionMethod string=""/>
+                        <communityString string=""/>
+                        <context string=""/>
+                        <namingUrl string=""/>
+                        <namingPort int=""/>
+                        <notificationIRPAgentVersion string=""/>
+                        <alarmIRPAgentVersion string=""/>
+                        <notificationIRPNamingContext context=""/>
+                        <alarmIRPNamingContext context=""/>
+                     </Protocol>
+                     <Browser>
+                        <browser string=""/>
+                        <browserURL string=""/>
+                        <bookname string=""/>
+                     </Browser>
+                  </DEFAULT>
+               </Connectivity>
+               <Tss>
+                  <Entry>
+                     <System string="PG_VCDB"/>
+                     <Type string="SECURE"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="PG_VCDB"/>
+                     <Type string="NORMAL"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+               </Tss>
+               <Relationship>
+                  <AssociableNode TO_FDN="Group=PGGrp_VCDB" AssociationType="Group_to_ManagedElement"/>
+                  <AssociableNode TO_FDN="ManagedElement=CUDB_VCDB,CudbFunction=CUDB_ManagedFunction" FROM_FDN="ManagedElement=PG_VCDB,PgFunction=PG_ManagedFunction" AssociationType="PgFunction_to_CudbFunction"/>
+                  <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               </Relationship>
+            </ManagedElement>
+            <ManagedElement sourceType="WPP">
+               <ManagedElementId string="SGSN_VCDB"/>
+               <primaryType type="SGSN"/>
+               <managedElementType types="Sgsn"/>
+               <associatedSite string="Site=SITE_VCDB"/>
+               <nodeVersion string="R5.5"/>
+               <platformVersion string=""/>
+               <swVersion string=""/>
+               <vendorName string=""/>
+               <userDefinedState string=""/>
+               <managedServiceAvailability int="1"/>
+               <isManaged boolean="true"/>
+               <connectionStatus string="ON"/>
+               <Connectivity>
+                  <DEFAULT>
+                     <emUrl url="http://1.2.3.44:8888/"/>
+                     <ipAddress string="1.2.3.44"/>
+                     <oldIpAddress string=""/>
+                     <hostname string=""/>
+                     <nodeSecurityState state="ON"/>
+                     <boardId string=""/>
+                     <Protocol number="0">
+                        <protocolType string="Netconf"/>
+                        <port int="0"/>
+                        <protocolVersion string=""/>
+                        <securityName string=""/>
+                        <authenticationMethod string=""/>
+                        <encryptionMethod string=""/>
+                        <communityString string=""/>
+                        <context string=""/>
+                        <namingUrl string=""/>
+                        <namingPort int=""/>
+                        <notificationIRPAgentVersion string=""/>
+                        <alarmIRPAgentVersion string=""/>
+                        <notificationIRPNamingContext context=""/>
+                        <alarmIRPNamingContext context=""/>
+                     </Protocol>
+                     <Browser>
+                        <browser string=""/>
+                        <browserURL string=""/>
+                        <bookname string=""/>
+                     </Browser>
+                  </DEFAULT>
+               </Connectivity>
+               <Tss>
+                  <Entry>
+                     <System string="SGSN_VCDB"/>
+                     <Type string="SECURE"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="SGSN_VCDB"/>
+                     <Type string="ROOT"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+                  <Entry>
+                     <System string="SGSN_VCDB"/>
+                     <Type string="NORMAL"/>
+                     <User string="test"/>
+                     <Password string="a"/>
+                  </Entry>
+               </Tss>
+               <Relationship>
+                  <AssociableNode TO_FDN="ManagedElement=BSC_VCDB" AssociationType="SGSN_to_BSC"/>
+                  <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               </Relationship>
+            </ManagedElement>
+   </Create>
+</Model>

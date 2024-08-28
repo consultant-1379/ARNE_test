@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne14_1.dtd">
+<Model version="1" importVersion="14.1">
+   <Modify>
+      <Site userLabel="VCDB_Site">
+         <altitude string="0"/>
+         <location string="Bangalore"/>
+         <longitude string="0"/>
+         <latitude string="0"/>
+         <worldTimeZoneId string="IST"/>
+         <freeText string=""/>
+         <datum string="wgs84"/>
+      </Site>
+      <Group userLabel="CUDB_GRP_VCDB" groupType="CUDBSystem" networkType="MSS"></Group>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="AXE_VCDB"/>
+         <primaryType type="AXE"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string=""/>
+         <platformVersion string="AXE 106 02"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="OFF"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="29.28.1.13"/>
+                     <ioIpAddressNodeA ip_v4="29.28.1.14"/>
+                     <ioIpAddressNodeB ip_v4="29.28.1.15"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="AXE_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="AXE_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="BSC_VCDB"/>
+         <primaryType type="BSC"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string="R11"/>
+         <platformVersion string="AXE 105 07/207 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="29.28.1.9"/>
+                     <ioIpAddressNodeA ip_v4="29.28.1.10"/>
+                     <ioIpAddressNodeB ip_v4="29.28.1.11"/>
+                     <hostname string=""/>
+                     <ftpRoot string="/"/>
+                     <securedFtpRoot string="/K:/fms/data/tmp"/>
+                     <ftpArea string="K:\fms\data\tmp"/>
+                     <securedFtpArea string="K:\fms\data\tmp"/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="BSC_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="BSC_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="LINUX">
+         <ManagedElementId string="CUDB_VCDB"/>
+         <primaryType type="CUDB"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string="R1.0FP1"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="http://29.28.1.20"/>
+               <ipAddress string="29.28.1.20"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="OFF"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="CUDB_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="CUDB_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=CUDB_GRP_VCDB" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="HLRS_VCDB"/>
+         <primaryType type="HLRServer"/>
+         <managedElementType types="AUCServer"/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string="R13.5"/>
+         <platformVersion string="AXE 106 30/6 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="OFF"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="29.28.1.16"/>
+                     <ioIpAddressNodeA ip_v4="29.28.1.17"/>
+                     <ioIpAddressNodeB ip_v4="29.28.1.18"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="HLRS_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="HLRS_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=CUDB_GRP_VCDB" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="MSCS_VCDB"/>
+         <primaryType type="MSCServer"/>
+         <managedElementType types="AUC"/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string="R15A"/>
+         <platformVersion string="APX 101 01/4 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="29.28.1.5"/>
+                     <ioIpAddressNodeA ip_v4="29.28.1.6"/>
+                     <ioIpAddressNodeB ip_v4="29.28.1.7"/>
+                     <hostname string=""/>
+                     <ftpRoot string="/"/>
+                     <securedFtpRoot string="/K:/fms/data/tmp"/>
+                     <ftpArea string="K:\fms\data\tmp"/>
+                     <securedFtpArea string="K:\fms\data\tmp"/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="MSCS_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="MSCS_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="MSC_VCDB"/>
+         <primaryType type="MSC"/>
+         <managedElementType types="HLR"/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string="R13.0"/>
+         <platformVersion string="APX 101 01/4 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="29.28.1.2"/>
+                     <ioIpAddressNodeA ip_v4="29.28.1.3"/>
+                     <ioIpAddressNodeB ip_v4="29.28.1.4"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="MSC_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="MSC_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="WPP">
+         <ManagedElementId string="SGSN"/>
+         <primaryType type="SGSN"/>
+         <managedElementType types="Sgsn"/>
+         <associatedSite string="Site=VCDB_Site"/>
+         <nodeVersion string="R7.0"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="http://29.28.1.12:8888/"/>
+               <ipAddress string="29.28.1.12"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="OFF"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="Netconf"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="SGSN"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="SGSN"/>
+               <Type string="ROOT"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="SGSN"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+   </Modify>
+</Model>

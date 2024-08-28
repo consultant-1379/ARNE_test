@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorTest">
+
+    <test name="CalculatorTest">
+        <classes>
+            <class name="com.ericsson.oss.arne.test.cases.CalculatorTest"/>
+        </classes>
+    </test>
+
+</suite>

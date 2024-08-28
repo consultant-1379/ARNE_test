@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ARNE-STCDB_Suite">
+        <test name="ARNE-STCDB_Suite">
+            <classes>
+  				<class name="com.ericsson.oss.arne.test.cases.Export_PerformanceTest"/> 
+				<class name="com.ericsson.oss.arne.test.cases.Import_PerformanceTest" />				
+			</classes>
+        </test>
+</suite>

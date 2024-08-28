@@ -1,0 +1,2 @@
+scriptName,path,output
+FtpServer_Import.sh,/var/opt/ericsson/arne/ARNE_KGB,0

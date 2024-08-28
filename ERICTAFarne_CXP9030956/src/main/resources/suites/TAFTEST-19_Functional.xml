@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TAFTEST-19_Functional">
+	<test name="TAFTEST-19_Functional">
+		<classes>
+			<class name="com.ericsson.sut.test.cases.ARNE_Import_FunctionalTest" />
+			<class name="com.ericsson.sut.test.cases.ARNE_Export_FunctionalTest" />
+			<class name="com.ericsson.sut.test.cases.ARNE_Modify_FunctionalTest" />
+			<class name="com.ericsson.sut.test.cases.ARNE_Delete_FunctionalTest" />
+		</classes>
+	</test>
+</suite>

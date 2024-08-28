@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ARNE_Export_Functional">
+	<test name="ARNE_Export_Functional">
+		<classes>
+			<class name="com.ericsson.sut.test.cases.ARNE_Export_FunctionalTest" />
+		</classes>
+	</test>
+</suite>

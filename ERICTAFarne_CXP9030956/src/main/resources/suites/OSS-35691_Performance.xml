@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OSS-35691_Performance">
+	<test name="OSS-35691_Performance">
+		<classes>
+			<class name="com.ericsson.oss.arne.test.cases.Modify_PerformanceTest" />
+		</classes>
+	</test>
+</suite>

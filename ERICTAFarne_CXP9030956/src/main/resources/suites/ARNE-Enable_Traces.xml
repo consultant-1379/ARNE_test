@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ARNE-Enable_Traces.xml">
+        <test name="ARNE-Enable_Traces.xml">
+            <classes>
+  				<class name="com.ericsson.oss.arne.test.cases.ARNEEnableTracesTest" />
+			</classes>
+        </test>
+</suite>

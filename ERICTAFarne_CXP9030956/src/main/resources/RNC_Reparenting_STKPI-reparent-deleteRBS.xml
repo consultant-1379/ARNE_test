@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne10_0.dtd">
+<Model version="1" importVersion="10.0">
+<Delete>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_VCDB,MeContext=RBS_VCDB,ManagedElement=1"/>
+</Delete>
+</Model>

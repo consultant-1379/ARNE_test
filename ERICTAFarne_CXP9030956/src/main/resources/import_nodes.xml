@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne13_2.dtd">
+<Model version="1" importVersion="13.2">
+   <Create>
+      <FtpServer userLabel="">
+         <FtpServerId string="FTPS"/>
+         <ipAddress string="1.1.1.13"/>
+         <hostname string="test"/>
+         <dataPortId int="0"/>
+         <controlPortId int="0"/>
+         <directoryPath string=""/>
+         <serviceSecurityState string="ON"/>
+                 <FtpService userLabel="FTPss">
+            <name string="FTPss"/>
+            <directoryPath string=""/>
+            <type string="SwStore"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTPss"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTPss"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTPservice">
+            <name string="FTPservice"/>
+            <directoryPath string="/LRAN/test/AIF/"/>
+            <type string="autoIntegration"/>
+            <networkType string="Lran"/>
+            <Tss>
+               <Entry>
+                  <System string="FTPservice"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTPservice"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTPntpu">
+            <name string="FTPntpu"/>
+            <directoryPath string=""/>
+            <type string="neTransientPmUp"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTPntpu"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTPntpu"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTPntcu">
+            <name string="FTPntcu"/>
+            <directoryPath string=""/>
+            <type string="neTransientCmUp"/>
+            <networkType string="Lran"/>
+            <Tss>
+               <Entry>
+                  <System string="FTPntcu"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTPntcu"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTPntcd">
+            <name string="FTPntcd"/>
+            <directoryPath string="/GRAN/test/Cm/#NE-NAME#/NeTransientDown/"/>
+            <type string="neTransientCmDown"/>
+            <networkType string="Geran"/>
+            <Tss>
+               <Entry>
+                  <System string="FTPntcd"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTPntcd"/>
+                  <Type string="NORMAL"/>
+                  <User string="aa"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+ </FtpServer>
+      <Site userLabel="Bangalore-ARNE">
+         <altitude string="0"/>
+         <location string="Bangalore"/>
+         <longitude string="0"/>
+         <latitude string="0"/>
+         <worldTimeZoneId string="IST"/>
+         <freeText string=""/>
+         <datum string="wgs84"/>
+      </Site>
+      <Group userLabel="CUDB" groupType="CUDBSystem" networkType="WCDMA"></Group>
+      <Group userLabel="CUDB01" groupType="CUDBSystem" networkType="WCDMA"></Group>
+      <Group userLabel="PG01" groupType="PGGroup" networkType="CORE"></Group>
+      <Group userLabel="PGgrp" groupType="PGGroup" networkType="CORE"></Group>
+      <SubNetwork userLabel="RNC" networkType="IPRAN">
+         <Group userLabel="RBSgrp" groupType="RBSGroup" networkType="WCDMA"></Group>
+         <ManagedElement sourceType="PICO">
+            <ManagedElementId string="PRBS"/>
+            <primaryType type="PRBS"/>
+            <managedElementType types="NodeB"/>
+            <associatedSite string="Site=Bangalore-ARNE"/>
+            <nodeVersion string="13B"/>
+            <platformVersion string=""/>
+            <swVersion string=""/>
+            <vendorName string=""/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <DEFAULT>
+                  <emUrl url="1.1.1.26"/>
+                  <ipAddress string="1.1.1.26"/>
+                  <oldIpAddress string=""/>
+                  <hostname string=""/>
+                  <nodeSecurityState state="ON"/>
+                  <boardId string=""/>
+                  <Protocol number="0">
+                     <protocolType string="Netconf"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string=""/>
+                     <namingPort int=""/>
+                     <notificationIRPAgentVersion string=""/>
+                     <alarmIRPAgentVersion string=""/>
+                     <notificationIRPNamingContext context=""/>
+                     <alarmIRPNamingContext context=""/>
+                  </Protocol>
+                  <Protocol number="1">
+                     <protocolType string="SNMP"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string=""/>
+                     <namingPort int=""/>
+                     <notificationIRPAgentVersion string=""/>
+                     <alarmIRPAgentVersion string=""/>
+                     <notificationIRPNamingContext context=""/>
+                     <alarmIRPNamingContext context=""/>
+                  </Protocol>
+                  <Protocol number="2">
+                     <protocolType string="SSH"/>
+                     <port int="22"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string=""/>
+                     <namingPort int=""/>
+                     <notificationIRPAgentVersion string=""/>
+                     <alarmIRPAgentVersion string=""/>
+                     <notificationIRPNamingContext context=""/>
+                     <alarmIRPNamingContext context=""/>
+                  </Protocol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+               </DEFAULT>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="PRBS"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="PRBS"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPservice" AssociationType="ManagedElement_to_autoIntegration"/>
+               <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPss" AssociationType="ManagedElement_to_ftpSwStore"/>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               <AssociableNode TO_FDN="SubNetwork=RNC,Group=RBSgrp" AssociationType="Group_to_ManagedElement"/>
+            </Relationship>
+         </ManagedElement>
+         <ManagedElement sourceType="CELLO">
+            <ManagedElementId string="RBS"/>
+            <primaryType type="RBS"/>
+            <managedElementType types=""/>
+            <associatedSite string="Site=Bangalore-ARNE"/>
+            <nodeVersion string=""/>
+            <platformVersion string=""/>
+            <swVersion string=""/>
+            <vendorName string="Ericsson"/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <neMIMVersion string="T.1.72"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <DEFAULT>
+                  <emUrl url="http://1.1.1.27:80/em/index.html"/>
+                  <ipAddress string="1.1.1.27"/>
+                  <oldIpAddress string=""/>
+                  <hostname string=""/>
+                  <nodeSecurityState state="ON"/>
+                  <boardId string=""/>
+                  <Protocol number="0">
+                     <protocolType string="CORBA"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string="http://1.1.1.27:80/cello/ior_files/nameroot.ior"/>
+                     <namingPort int="0"/>
+                     <notificationIRPAgentVersion string="3.2"/>
+                     <alarmIRPAgentVersion string="3.2"/>
+                     <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                     <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+                  </Protocol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+               </DEFAULT>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="RBS"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="RBS"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+               <AssociableNode TO_FDN="SubNetwork=RNC,Group=RBSgrp" AssociationType="Group_to_MeContext"/>
+            </Relationship>
+         </ManagedElement>
+         <ManagedElement sourceType="CELLO">
+            <ManagedElementId string="RNC"/>
+            <primaryType type="RNC"/>
+            <managedElementType types=""/>
+            <associatedSite string="Site=Bangalore-ARNE"/>
+            <nodeVersion string=""/>
+            <platformVersion string=""/>
+            <swVersion string=""/>
+            <vendorName string="Ericsson"/>
+            <userDefinedState string=""/>
+            <managedServiceAvailability int="1"/>
+            <isManaged boolean="true"/>
+            <neMIMVersion string="V.3.2132"/>
+            <connectionStatus string="ON"/>
+            <Connectivity>
+               <DEFAULT>
+                  <emUrl url="http://1.1.1.25:80/em/index.html"/>
+                  <ipAddress string="1.1.1.25"/>
+                  <oldIpAddress string=""/>
+                  <hostname string=""/>
+                  <nodeSecurityState state="ON"/>
+                  <boardId string=""/>
+                  <Protocol number="0">
+                     <protocolType string="CORBA"/>
+                     <port int="0"/>
+                     <protocolVersion string=""/>
+                     <securityName string=""/>
+                     <authenticationMethod string=""/>
+                     <encryptionMethod string=""/>
+                     <communityString string=""/>
+                     <context string=""/>
+                     <namingUrl string="http://1.1.1.25:80/cello/ior_files/nameroot.ior"/>
+                     <namingPort int="0"/>
+                     <notificationIRPAgentVersion string="3.2"/>
+                     <alarmIRPAgentVersion string="3.2"/>
+                     <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                     <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+                  </Protocol>
+                  <Browser>
+                     <browser string=""/>
+                     <browserURL string=""/>
+                     <bookname string=""/>
+                  </Browser>
+               </DEFAULT>
+            </Connectivity>
+            <Tss>
+               <Entry>
+                  <System string="RNC"/>
+                  <Type string="NORMAL"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="RNC"/>
+                  <Type string="SECURE"/>
+                  <User string="a"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+            <Relationship>
+               <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+            </Relationship>
+         </ManagedElement>
+      </SubNetwork>
+      <SubNetwork userLabel="SN001" networkType="IPRAN">
+      </SubNetwork>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="BSC001"/>
+         <primaryType type="BSC"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R10"/>
+         <platformVersion string="AXE 105 07/207 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="1.1.1.1"/>
+                     <ioIpAddressNodeA ip_v4="1.1.1.2"/>
+                     <ioIpAddressNodeB ip_v4="1.1.1.3"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="BSC001"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="BSC001"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagedElement=BTS,BtsFunction=BTS_ManagedFunction" FROM_FDN="ManagedElement=BSC001,BssFunction=BSS_ManagedFunction" AssociationType="BssFunction_to_BtsFunction"/>
+            <AssociableNode TO_FDN="ManagedElement=STN,StnFunction=STN_ManagedFunction" FROM_FDN="ManagedElement=BSC001,BssFunction=BSS_ManagedFunction" AssociationType="StnFunction_to_BssFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="RBS200">
+         <ManagedElementId string="BTS"/>
+         <primaryType type="BTS"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string=""/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="false"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.1.1.12"/>
+               <ipAddress string="1.1.1.12"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="OFF"/>
+               <boardId string=""/>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="BTS"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagedElement=BSC001,BssFunction=BSS_ManagedFunction" FROM_FDN="ManagedElement=BTS,BtsFunction=BTS_ManagedFunction" AssociationType="BssFunction_to_BtsFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="LINUX">
+         <ManagedElementId string="CUDB"/>
+         <primaryType type="CUDB"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R1.0"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.1.1.13"/>
+               <ipAddress string="1.1.1.13"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="CUDB"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="CUDB"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=CUDB" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagedElement=PG,PgFunction=PG_ManagedFunction" FROM_FDN="ManagedElement=CUDB,CudbFunction=CUDB_ManagedFunction" AssociationType="PgFunction_to_CudbFunction"/>
+            <AssociableNode TO_FDN="ManagedElement=PG01,PgFunction=PG_ManagedFunction" FROM_FDN="ManagedElement=CUDB,CudbFunction=CUDB_ManagedFunction" AssociationType="PgFunction_to_CudbFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="HLRS"/>
+         <primaryType type="HLRServer"/>
+         <managedElementType types="AUCServer"/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="13B"/>
+         <platformVersion string="AXE 106 30/6 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="1.1.1.18"/>
+                     <ioIpAddressNodeA ip_v4="1.1.1.19"/>
+                     <ioIpAddressNodeB ip_v4="1.1.1.20"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="HLRS"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="HLRS"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=CUDB" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="Group=CUDB01" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagedElement=PG,PgFunction=PG_ManagedFunction" FROM_FDN="ManagedElement=HLRS,HlrserverFunction=HLRSERVER_ManagedFunction" AssociationType="HlrserverFunction_to_PgFunction"/>
+            <AssociableNode TO_FDN="ManagedElement=PG01,PgFunction=PG_ManagedFunction" FROM_FDN="ManagedElement=HLRS,HlrserverFunction=HLRSERVER_ManagedFunction" AssociationType="HlrserverFunction_to_PgFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="MSC001"/>
+         <primaryType type="MSC"/>
+         <managedElementType types="AUC"/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R10"/>
+         <platformVersion string="APX 101 01/4 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="1.1.1.7"/>
+                     <ioIpAddressNodeA ip_v4="1.1.1.8"/>
+                     <ioIpAddressNodeB ip_v4="1.1.1.9"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="MSC001"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="MSC001"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="MSCS001"/>
+         <primaryType type="MSCServer"/>
+         <managedElementType types="AUC"/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R10"/>
+         <platformVersion string="APX 101 01/4 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="1.1.1.4"/>
+                     <ioIpAddressNodeA ip_v4="1.1.1.5"/>
+                     <ioIpAddressNodeB ip_v4="1.1.1.6"/>
+                     <hostname string=""/>
+                     <ftpRoot string="/"/>
+                     <securedFtpRoot string="/K:/fms/data/tmp"/>
+                     <ftpArea string="K:\fms\data\tmp"/>
+                     <securedFtpArea string="K:\fms\data\tmp"/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="MSCS001"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="MSCS001"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="LINUX">
+         <ManagedElementId string="PG"/>
+         <primaryType type="PG"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R5.0"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="https://1.1.1.16:8181/management"/>
+               <ipAddress string="1.1.1.16"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SFTP"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="2">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="PG"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="PG"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=PG01" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagedElement=CUDB,CudbFunction=CUDB_ManagedFunction" FROM_FDN="ManagedElement=PG,PgFunction=PG_ManagedFunction" AssociationType="PgFunction_to_CudbFunction"/>
+            <AssociableNode TO_FDN="ManagedElement=HLRS,HlrserverFunction=HLRSERVER_ManagedFunction" FROM_FDN="ManagedElement=PG,PgFunction=PG_ManagedFunction" AssociationType="HlrserverFunction_to_PgFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="LINUX">
+         <ManagedElementId string="PG01"/>
+         <primaryType type="PG"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R5.0"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="https://1.1.1.17:8181/management"/>
+               <ipAddress string="1.1.1.17"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SFTP"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="2">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="PG01"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="PG01"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="Group=PG01" AssociationType="Group_to_ManagedElement"/>
+            <AssociableNode TO_FDN="ManagedElement=CUDB,CudbFunction=CUDB_ManagedFunction" FROM_FDN="ManagedElement=PG01,PgFunction=PG_ManagedFunction" AssociationType="PgFunction_to_CudbFunction"/>
+            <AssociableNode TO_FDN="ManagedElement=HLRS,HlrserverFunction=HLRSERVER_ManagedFunction" FROM_FDN="ManagedElement=PG01,PgFunction=PG_ManagedFunction" AssociationType="HlrserverFunction_to_PgFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="IS">
+         <ManagedElementId string="SBG"/>
+         <primaryType type="SBG"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="1.2"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="https://1.1.1.10"/>
+               <ipAddress string="1.1.1.10"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="SBG"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="SBG"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="WPP">
+         <ManagedElementId string="SGSN"/>
+         <primaryType type="SGSN"/>
+         <managedElementType types="Sgsn"/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="R5.5"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="http://1.1.1.11:8888/"/>
+               <ipAddress string="1.1.1.11"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="CORBA"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string="1.1.1.11"/>
+                  <namingPort int="0"/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="Netconf"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="SGSN"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="SGSN"/>
+               <Type string="ROOT"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="SGSN"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="PICO">
+         <ManagedElementId string="STN"/>
+         <primaryType type="STN"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string="07B"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.1.1.14"/>
+               <ipAddress string="1.1.1.14"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="STN"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="STN"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPntcd" AssociationType="ManagedElement_to_neTransientCmDown"/>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPntcu" AssociationType="ManagedElement_to_neTransientCmUp"/>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPntpu" AssociationType="ManagedElement_to_neTransientPm"/>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPservice" AssociationType="ManagedElement_to_autoIntegration"/>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPss" AssociationType="ManagedElement_to_ftpSwStore"/>
+            <AssociableNode TO_FDN="ManagedElement=BSC001,BssFunction=BSS_ManagedFunction" FROM_FDN="ManagedElement=STN,StnFunction=STN_ManagedFunction" AssociationType="StnFunction_to_BssFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="CELLO">
+         <ManagedElementId string="ERBS"/>
+         <primaryType type="ERBS"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=Bangalore-ARNE"/>
+         <nodeVersion string=""/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <neMIMVersion string="E.1.49"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="http://1.1.1.15:80/em/index.html"/>
+               <ipAddress string="1.1.1.15"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="CORBA"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string="http://1.1.1.15:80/cello/ior_files/nameroot.ior"/>
+                  <namingPort int="0"/>
+                  <notificationIRPAgentVersion string="3.2"/>
+                  <alarmIRPAgentVersion string="3.2"/>
+                  <notificationIRPNamingContext context="NOTIFICATION_IRP_VERSION_1_1"/>
+                  <alarmIRPNamingContext context="ALARM_IRP_VERSION_1_1"/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="ERBS"/>
+               <Type string="NORMAL"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="ERBS"/>
+               <Type string="SECURE"/>
+               <User string="a"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPservice" AssociationType="ManagedElement_to_autoIntegration"/>
+            <AssociableNode TO_FDN="FtpServer=FTPS,FtpService=FTPss" AssociationType="ManagedElement_to_ftpSwStore"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+   </Create>
+</Model>

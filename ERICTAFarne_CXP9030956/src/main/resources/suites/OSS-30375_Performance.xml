@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OSS-30375_Performance" verbose="10" >
+	<test name="OSS-30375_Performance">
+		<classes>
+			<class name="com.ericsson.oss.arne.test.cases.Import_PerformanceTest" />
+		</classes>
+	</test>
+</suite>

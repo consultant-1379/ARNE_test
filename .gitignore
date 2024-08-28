@@ -1,0 +1,49 @@
+# Compiled source #
+*.class
+*/bin/*
+
+# Eclipse files
+.project
+.classpath
+.settings
+.metadata
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.ipr
+*.iml
+
+# Test output files
+*/test-output/*
+/test-output/
+/test-output
+test-output/
+test-output/**/*
+*/test-output/**/*
+
+# Packages
+*.jar
+
+# Maven build files
+**/target
+ERICTAFmodulename_CXPxxxxxxxx/target/
+reports
+application.properties
+
+# PMD
+.pmd
+
+# Merge files
+*.orig
+
+#tmp irectories
+tmp/
+test-output/
+
+# Windows binaries
+*.exe
+*.dll
+
+*.nfs.*
+ERICTAFarne_CXP9030956/src/main/resources/data/.nfs0000000001ada93f00000243

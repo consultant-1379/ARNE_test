@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne10_0.dtd">
+<Model version="1" importVersion="10.0">
+<Delete>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=AXE_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=BSC_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=CUDB_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=HLRS_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=MSCS_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=MSC_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,ManagedElement=SGSN"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,Group=CUDB_GRP_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,Site=VCDB_Site"/>
+</Delete>
+</Model>

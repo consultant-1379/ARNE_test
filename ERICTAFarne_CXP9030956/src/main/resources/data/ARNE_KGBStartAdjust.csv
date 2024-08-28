@@ -1,0 +1,2 @@
+path,scriptName,expected
+/var/opt/ericsson/arne/ARNE_KGB,executeStartAdjust.sh,0

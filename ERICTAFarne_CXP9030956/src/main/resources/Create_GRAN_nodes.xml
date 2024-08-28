@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne13_2.dtd">
+<Model version="1" importVersion="13.2">
+   <Create>
+      <FtpServer userLabel="">
+         <FtpServerId string="FTP_VCDB"/>
+         <ipAddress string="1.2.3.25"/>
+         <hostname string=""/>
+         <dataPortId int="0"/>
+         <controlPortId int="0"/>
+         <directoryPath string=""/>
+         <serviceSecurityState string="ON"/>
+                 <FtpService userLabel="FTP_sw_VCDB">
+            <name string="FTP_sw_VCDB"/>
+            <directoryPath string=""/>
+            <type string="SwStore"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTP_sw_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTP_sw_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTP_nepmup">
+            <name string="FTP_nepmup"/>
+            <directoryPath string=""/>
+            <type string="neTransientPmUp"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTP_nepmup"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTP_nepmup"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTP_necmup_VCDB">
+            <name string="FTP_necmup_VCDB"/>
+            <directoryPath string=""/>
+            <type string="neTransientCmUp"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTP_necmup_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTP_necmup_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+         <FtpService userLabel="FTP_necmdn_VCDB">
+            <name string="FTP_necmdn_VCDB"/>
+            <directoryPath string=""/>
+            <type string="neTransientCmDown"/>
+            <networkType string=""/>
+            <Tss>
+               <Entry>
+                  <System string="FTP_necmdn_VCDB"/>
+                  <Type string="NORMAL"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+               <Entry>
+                  <System string="FTP_necmdn_VCDB"/>
+                  <Type string="SECURE"/>
+                  <User string="test"/>
+                  <Password string="a"/>
+               </Entry>
+            </Tss>
+         </FtpService>
+ </FtpServer>
+      <Site userLabel="SITE_VCDB">
+         <altitude string="0"/>
+         <location string="Bangalore"/>
+         <longitude string="0"/>
+         <latitude string="0"/>
+         <worldTimeZoneId string="IST"/>
+         <freeText string=""/>
+         <datum string="wgs84"/>
+      </Site>
+      <ManagedElement sourceType="RBS200">
+         <ManagedElementId string="BTS_VCDB"/>
+         <primaryType type="BTS"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string=""/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="false"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.2.3.25"/>
+               <ipAddress string="1.2.3.25"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="OFF"/>
+               <boardId string=""/>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="BTS_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="SIU">
+         <ManagedElementId string="STN_VCDB"/>
+         <primaryType type="STN"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string="07B"/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.2.3.24"/>
+               <ipAddress string="1.2.3.24"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Protocol number="0">
+                  <protocolType string="SSH"/>
+                  <port int="22"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Protocol number="1">
+                  <protocolType string="SNMP"/>
+                  <port int="0"/>
+                  <protocolVersion string=""/>
+                  <securityName string=""/>
+                  <authenticationMethod string=""/>
+                  <encryptionMethod string=""/>
+                  <communityString string=""/>
+                  <context string=""/>
+                  <namingUrl string=""/>
+                  <namingPort int=""/>
+                  <notificationIRPAgentVersion string=""/>
+                  <alarmIRPAgentVersion string=""/>
+                  <notificationIRPNamingContext context=""/>
+                  <alarmIRPNamingContext context=""/>
+               </Protocol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="STN_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="STN_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="FtpServer=FTP_VCDB,FtpService=FTP_necmdn_VCDB" AssociationType="ManagedElement_to_neTransientCmDown"/>
+            <AssociableNode TO_FDN="FtpServer=FTP_VCDB,FtpService=FTP_necmup_VCDB" AssociationType="ManagedElement_to_neTransientCmUp"/>
+            <AssociableNode TO_FDN="FtpServer=FTP_VCDB,FtpService=FTP_nepmup" AssociationType="ManagedElement_to_neTransientPm"/>
+            <AssociableNode TO_FDN="FtpServer=FTP_VCDB,FtpService=FTP_sw_VCDB" AssociationType="ManagedElement_to_ftpSwStore"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="AXE">
+         <ManagedElementId string="TRC_VCDB"/>
+         <primaryType type="TRC"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string="R12"/>
+         <platformVersion string="AXE 105 07/211 R1A"/>
+         <swVersion string=""/>
+         <vendorName string="Ericsson"/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <AXE>
+               <nodeSecurityState state="ON"/>
+               <neOSSHostname string="masterservice"/>
+               <APG ioType="APG43L">
+                  <ioApplications applications="APIO"/>
+                  <IPAddressing>
+                     <ioIpAddressCluster ip_v4="1.2.3.26"/>
+                     <ioIpAddressNodeA ip_v4="1.2.3.27"/>
+                     <ioIpAddressNodeB ip_v4="1.2.3.28"/>
+                     <hostname string=""/>
+                     <ftpRoot string=""/>
+                     <securedFtpRoot string=""/>
+                     <ftpArea string=""/>
+                     <securedFtpArea string=""/>
+                  </IPAddressing>
+               </APG>
+               <WinFiol>
+                  <loginType string="tgwsingle"/>
+                  <wfDangerousCmdsFile0 string=""/>
+                  <wfDangerousCmdsFile1 string=""/>
+               </WinFiol>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </AXE>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="TRC_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="TRC_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+      <ManagedElement sourceType="RTS">
+         <ManagedElementId string="TimeServer_VCDB"/>
+         <primaryType type="TimeServer"/>
+         <managedElementType types=""/>
+         <associatedSite string="Site=SITE_VCDB"/>
+         <nodeVersion string=""/>
+         <platformVersion string=""/>
+         <swVersion string=""/>
+         <vendorName string=""/>
+         <userDefinedState string=""/>
+         <managedServiceAvailability int="1"/>
+         <isManaged boolean="true"/>
+         <connectionStatus string="ON"/>
+         <Connectivity>
+            <DEFAULT>
+               <emUrl url="1.2.3.29"/>
+               <ipAddress string="1.2.3.29"/>
+               <oldIpAddress string=""/>
+               <hostname string=""/>
+               <nodeSecurityState state="ON"/>
+               <boardId string=""/>
+               <Browser>
+                  <browser string=""/>
+                  <browserURL string=""/>
+                  <bookname string=""/>
+               </Browser>
+            </DEFAULT>
+         </Connectivity>
+         <Tss>
+            <Entry>
+               <System string="TimeServer_VCDB"/>
+               <Type string="NORMAL"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+            <Entry>
+               <System string="TimeServer_VCDB"/>
+               <Type string="SECURE"/>
+               <User string="test"/>
+               <Password string="a"/>
+            </Entry>
+         </Tss>
+         <Relationship>
+            <AssociableNode TO_FDN="ManagedElement=STN_VCDB,StnFunction=STN_ManagedFunction" FROM_FDN="ManagedElement=TimeServer_VCDB,TimeserverFunction=TIMESERVER_ManagedFunction" AssociationType="StnFunction_to_TimeserverFunction"/>
+            <AssociableNode TO_FDN="ManagementNode=ONRM" AssociationType="MgmtAssociation"/>
+         </Relationship>
+      </ManagedElement>
+   </Create>
+</Model>

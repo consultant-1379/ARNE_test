@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ARNE-KGB_Suite.xml">
+        <test name="ARNE-KGB_Suite.xml">
+            <classes>
+  				<class name="com.ericsson.oss.arne.test.cases.DeleteExistingNodesTest" />
+			</classes>
+        </test>
+</suite>

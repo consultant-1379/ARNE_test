@@ -1,0 +1,4 @@
+host,command,args,STDOUT,STDERR,EXITCODE,timeout
+atvts694,CD_import,,,,,,
+atvts694,VALIDATE_XML,import_nodes.xml,,,,
+atvts694,IMPORT_XML,import_nodes.xml,,,,

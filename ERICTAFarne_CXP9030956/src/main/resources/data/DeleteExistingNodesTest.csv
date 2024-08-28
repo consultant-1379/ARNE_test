@@ -1,0 +1,3 @@
+scriptName,remoteScriptPath,output
+create_delete_xml.sh,/var/tmp,0
+Netsim_Delete_Nodes.sh,/var/tmp,0

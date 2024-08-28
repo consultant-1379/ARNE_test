@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Model SYSTEM "/opt/ericsson/arne/etc/arne10_0.dtd">
+<Model version="1" importVersion="10.0">
+<Delete>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_VCDB,ManagedElement=PRBS_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_VCDB,MeContext=RBS_VCDB,ManagedElement=1"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_VCDB,MeContext=RNC_VCDB,ManagedElement=1"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,MeContext=ERBS_VCDB,ManagedElement=1"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,MeContext=RXI_VCDB,ManagedElement=1"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_VCDB,Group=RBSGrp_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,SubNetwork=RNC_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,FtpServer=FTP_VCDB,FtpService=FTP_sw_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,FtpServer=FTP_VCDB,FtpService=FTP_Auto_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,FtpServer=FTP_VCDB"/>
+<Object fdn="SubNetwork=ONRM_ROOT_MO,Site=Site01"/>
+</Delete>
+</Model>

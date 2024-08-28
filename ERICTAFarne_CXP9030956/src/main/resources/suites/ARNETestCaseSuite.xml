@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ARNETestCaseSuite">
+
+    <test name="ARNETestCase">
+        <classes>
+            <class name="com.ericsson.oss.arne.test.cases.ARNETestCase"/>
+        </classes>
+    </test>
+ <test name="ARNETestCase1">
+        <classes>
+            <class name="com.ericsson.oss.arne.test.cases.ARNETestCase1"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ARNE_Delete_Functional">
+	<test name="ARNE_Delete_Functional">
+		<classes>
+			<class name="com.ericsson.sut.test.cases.ARNE_Delete_FunctionalTest" />
+		</classes>
+	</test>
+</suite>

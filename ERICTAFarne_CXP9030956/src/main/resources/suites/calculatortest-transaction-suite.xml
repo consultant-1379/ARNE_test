@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorTestTransaction">
+
+    <parameter name="taf.data-provider" value="ERICTAFmodulename_CXPxxxxxxxx.calculator-transaction"/>
+    <parameter name="taf.data-provider.strategy" value="STOP_ON_END"/>
+
+    <test name="CalculatorTest">
+        <classes>
+            <class name="com.ericsson.oss.arne.test.cases.CalculatorTest"/>
+        </classes>
+    </test>
+
+</suite>

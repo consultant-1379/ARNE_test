@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ARNE-Disable_Traces.xml">
+        <test name="ARNE-Disable_Traces.xml">
+            <classes>
+  				<class name="com.ericsson.oss.arne.test.cases.ARNEDisableTracesTest" />
+			</classes>
+        </test>
+</suite>
